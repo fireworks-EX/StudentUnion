@@ -1,0 +1,115 @@
+<view class="container">
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <van-cell-group>
+      <van-field
+        value="{{ uid }}"
+        clearable
+        required
+        label="学号"
+        placeholder="请输入学号"
+        bind:change="onChangeid"
+      />
+      <van-field
+        value="{{ pwd1 }}"
+        type="password"
+        clearable
+        required
+        label="密码"
+        placeholder="请输入密码"
+        bind:change="onChangepwd1"
+      />
+      <van-field
+        value="{{ pwd2 }}"
+        type="password"
+        clearable
+        required
+        label="确认密码"
+        placeholder="请确认密码"
+        bind:change="onChangepwd2"
+      />
+
+      <van-field
+        value="{{ username }}"
+        clearable
+        required
+        label="姓名"
+        placeholder="请输入姓名"
+        bind:change="onChangename"
+      />
+
+      <van-field
+        value="{{ classId }}"
+        clearable
+        required
+        label="班级"
+        placeholder="请输入班级"
+        bind:change="onChangeclassId"
+      />
+
+      <van-field
+        value="{{ phonenumber }}"
+        clearable
+        required
+        label="电话"
+        placeholder="请输入电话"
+        bind:change="onChangephone"
+      />  
+
+      <van-field
+        value="{{ email }}"
+        clearable
+        label="邮箱"
+        placeholder="请输入邮箱"
+        bind:change="onChangeemail"
+      />     
+
+      <van-field
+        value="{{ reason }}"
+        clearable
+        required
+        label="理由"
+        placeholder="请输入理由"
+        bind:change="onChangerea"
+      />
+    </van-cell-group>
+
+    <van-cell title="分院" is-link value="{{ branch }}" bind:click="bra"/>
+
+    <van-action-sheet show="{{ show1 }}">
+      <van-picker
+        show-toolbar
+        columns="{{ columns1 }}"
+        bind:cancel="onCancel1"
+        bind:confirm="onConfirm1"
+      />
+    </van-action-sheet>
+
+    <van-cell title="部门" is-link value="{{ departments }}" bind:click="dep"/>
+
+    <van-action-sheet show="{{ show2 }}">
+      <van-picker
+        show-toolbar
+        columns="{{ columns2 }}"
+        bind:cancel="onCancel2"
+        bind:confirm="onConfirm2"
+      />
+    </van-action-sheet>
+
+    <view class="flex">
+      <label>性别:</label>
+      <radio-group class="radio-group" bindchange="onChangesex">
+          <label class="radio" >
+              男<radio value="男" checked="{{check1}}"/>
+          </label>
+          <label class="radio" >
+              女<radio value="女" checked="{{check2}}"/>
+          </label>
+      </radio-group>
+    </view>
+
+    <van-button class="btn" bind:click="submit" type="primary" size="large" color="linear-gradient(to right, #6495ED, #00BFFF)">提交</van-button>
+    <van-button class="btn" bind:click="reset" type="primary" size="large" color="linear-gradient(to right, #98FB98, #40E0D0)">重置</van-button>
+  </form>
+
+</view>

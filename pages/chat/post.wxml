@@ -1,0 +1,30 @@
+<view class="container">
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <van-cell-group>
+
+      <van-field
+        value="{{ depuid }}"
+        clearable
+        required
+        label="通知类型"
+        placeholder="请输入类型"
+        bind:change="onChangedepuid"
+      />
+
+      <van-field
+        value="{{ informerid }}"
+        clearable
+        required
+        label="通知内容"
+        placeholder="请输入内容"
+        bind:change="onChangeinformerid"
+      />  
+    </van-cell-group>
+
+
+    <van-button class="btn" bind:click="submit" type="primary" size="large" color="linear-gradient(to right, #6495ED, #00BFFF)">提交</van-button>
+    <van-button class="btn" bind:click="reset" type="primary" size="large" color="linear-gradient(to right, #98FB98, #40E0D0)">重置</van-button>
+  </form>
+
+</view>

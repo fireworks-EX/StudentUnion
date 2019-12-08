@@ -1,0 +1,44 @@
+<view class="container">
+<van-cell-group>
+  <van-cell link-type="navigateTo" url="../quickset/usr/usr" >
+    <view class="item">
+      <image class="pic" mode="scaleToFill" src="../../pic/tree.png"></image>
+      <text class="txt">学 号：{{uid}}\n姓 名：{{username}}</text>
+      <text>　　　</text>
+      <van-icon name="arrow" />
+    </view>
+  </van-cell>
+  <van-cell />
+  <van-cell is-link link-type="navigateTo" url="../quickset/dep/member" >
+    <view slot="title">
+      <text class="txt">部门：{{departments}}</text>
+    </view>
+  </van-cell>
+  <van-cell />
+  <van-cell >
+    <view slot="title">
+      <text class="txt">职位：{{level}}</text>
+    </view>
+  </van-cell>
+  <van-cell />
+  <van-cell is-link link-type="navigateTo" url="../quickset/apr/apr" >
+    <view slot="title">
+      <text class="txt">审批事项</text>
+    </view>
+  </van-cell>
+  <van-cell />
+  <van-cell is-link link-type="navigateTo" url="../quickset/set/quit" >
+    <view slot="title">
+      <text class="txt">设置 </text>
+      <van-icon name="setting-o" />
+    </view>
+  </van-cell>
+</van-cell-group>
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item name='message'  icon="comment-o" dot="{{notice}}">消息</van-tabbar-item>
+  <van-tabbar-item name='manage' icon="orders-o">管理</van-tabbar-item>
+  <van-tabbar-item name='user' icon="user-o">个人主页</van-tabbar-item>
+</van-tabbar>
+
+</view>

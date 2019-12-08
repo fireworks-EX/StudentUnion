@@ -1,0 +1,24 @@
+<view class="container">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    show-action
+    bind:search="onSearch"
+    bind:cancel="onCancel"
+  />
+
+  <view wx:if="{{hide}}">
+    <text class="txt">活动id：{{result.dataObj.activityid}}\n </text>
+    <text class="txt">活动名: {{result.dataObj.activityname}}\n </text>
+    <text class="txt">申请部门：{{result.dataObj.applydep}}\n </text>
+    <text class="txt">协同部门：{{result.dataObj.departmentassist}}\n </text>
+    <text class="txt">申请者学号: {{result.dataObj.applyuserid}}\n </text>
+    <text class="txt">活动地点：{{result.dataObj.actlocation}}\n </text>
+    <text class="txt">活动内容：{{result.dataObj.actcontent}}\n </text>
+    <text class="txt">活动人数：{{result.dataObj.peopleamount}}\n </text>
+    <text class="txt">活动开始时间：{{result.dataObj.starttime}}\n </text>
+    <text class="txt">活动结束时间：{{result.dataObj.overtime}}\n </text>
+    <text class="txt">活动状态：{{result.dataObj.iscancel}}\n </text>
+    <text class="txt">审批id：{{result.dataObj.judgeid}}\n </text>
+  </view>
+</view>

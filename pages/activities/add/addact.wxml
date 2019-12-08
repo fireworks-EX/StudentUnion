@@ -1,0 +1,89 @@
+<view class="container">
+
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <van-cell-group>
+      <van-field
+        value="{{ activityname	 }}"
+        clearable
+        required
+        label="活动名"
+        placeholder="请输入活动名"
+        bind:change="onChangeact"
+      />
+
+      <van-field
+        value="{{ peopleamount }}"
+        clearable
+        required
+        label="人数"
+        placeholder="请输入人数"
+        bind:change="onChangemount"
+      />
+
+      <van-field
+        value="{{ actlocation }}"
+        clearable
+        required
+        label="地点"
+        placeholder="请输入地点"
+        bind:change="onChangeloc"
+      />
+
+      <van-field
+        value="{{ actcontent }}"
+        clearable
+        required
+        label="内容"
+        placeholder="请输入内容"
+        bind:change="onChangecon"
+      />
+
+    </van-cell-group>
+
+    <van-cell title="申请者学号" value="{{ applyuserid }}"/>
+
+    <van-cell title="发起部门" value="{{ applydep }}"/>
+
+    <van-cell title="协同部门" value="{{ departmentassist }}" />
+
+    <van-checkbox-group wx:for="{{columns}}" value="{{departmentassist}}" bind:change="onChange">
+      <van-checkbox name="{{item}}">{{item}}</van-checkbox>
+    </van-checkbox-group>
+
+    <van-cell title="开始时间" is-link value="{{ starttime }}" bind:click="start"/>
+
+    <van-action-sheet show="{{ show1 }}">
+      <van-datetime-picker
+        type="datetime"
+        value="{{ currentDate1 }}"
+        min-date="{{ minDate1 }}"
+        max-date="{{ maxDate1 }}"
+        bind:input="onInput1"
+        bind:cancel="onCancel1"
+        bind:confirm="onConfirm1"
+      />
+    </van-action-sheet>
+
+    <van-cell title="结束时间" is-link value="{{ overtime }}" bind:click="over"/>
+
+    <van-action-sheet show="{{ show2 }}">
+      <van-datetime-picker
+        type="datetime"
+        value="{{ currentDate2 }}"
+        min-date="{{ minDate2 }}"
+        max-date="{{ maxDate2 }}"
+        bind:input="onInput2"
+        bind:cancel="onCancel2"
+        bind:confirm="onConfirm2"
+      />
+    </van-action-sheet>
+
+    <van-button class="btn" bind:click="submit" type="primary" size="large" color="linear-gradient(to right, #6495ED, #00BFFF)">提交</van-button>
+    <van-button class="btn" bind:click="reset" type="primary" size="large" color="linear-gradient(to right, #98FB98, #40E0D0)">重置</van-button>
+
+  </form>
+
+
+</view>

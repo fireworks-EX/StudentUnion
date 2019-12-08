@@ -1,0 +1,57 @@
+<view class="container">
+  <van-image class="pic"
+    round
+    width="5rem"
+    height="5rem"
+    src="../../pic/tree.png"
+  />
+
+<van-panel title="基本信息"  status="详情" use-footer-slot>
+
+  <view class="flex"><label>学号:{{uid}}</label></view> 
+  <view class="flex"><label>姓名:{{username}}</label></view> 
+  <view class="flex"><label>分院:{{branch}}</label></view>
+  <view class="flex"><label>班级:{{classId}}</label></view>
+  <view class="flex"><label>部门:{{departments}}</label></view>
+  <view class="flex"><label>职位:{{level}}</label></view>
+  <view class="flex"><label>性别:{{sex}}</label></view>
+  <view class="flex"><label>电话:{{phonenumber}}</label></view>
+  <view class="flex"><label>邮箱:{{email}}</label></view>
+
+  <van-divider contentPosition="center">评价</van-divider>
+
+  <!-- <view class="flex">
+    <label>总体评价:</label>
+    <van-rate
+      value="{{ value }}"
+      allow-half
+      void-icon="star"
+      bind:change="onChange"
+    />
+  </view> -->
+  <view class="flex">
+    <label>工作能力:</label>
+    <van-rate
+      value="{{ value1 }}"
+      allow-half
+      void-icon="star"
+      bind:change="onChange1"
+    />
+  </view>
+  <view class="flex">
+    <label>出勤情况:</label>
+    <van-rate
+      value="{{ value2 }}"
+      allow-half
+      void-icon="star"
+      bind:change="onChange2"
+    />
+  </view>
+  <view slot="footer" class="right">
+    <van-button bind:click="reset" size="small">重置</van-button>
+    <van-button bind:click="submit" size="small" type="danger">提交</van-button>
+  </view>
+</van-panel>
+
+
+</view>

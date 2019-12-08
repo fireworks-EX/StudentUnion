@@ -1,0 +1,24 @@
+<view class="container">
+
+<van-grid square clickable column-num="2">
+  <van-grid-item
+    icon="hotel-o"
+    link-type="navigateTo"
+    url="load/all"
+    text="请假一览"
+  />
+  <van-grid-item
+    icon="add-o"
+    link-type="navigateTo"
+    url="add/addoff"
+    text="申请请假"
+  />
+  <van-grid-item
+    icon="search"
+    link-type="navigateTo"
+    url="search/searchoff"
+    text="查询请假详情"
+  />
+</van-grid>
+
+</view>

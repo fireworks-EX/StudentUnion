@@ -1,0 +1,17 @@
+<view class="container">
+<van-panel title="部门：{{ depName }}"  status="详情" use-footer-slot>
+  <van-cell-group wx:for="{{ result }}">
+    <van-cell is-link link-type="navigateTo" url="../star/star">
+      <view class="item" id="{{index}}" bindtap="click">
+        <image class="pic" mode="scaleToFill" src="../../../pic/tree.png"></image>
+        <text class="text" wx:if="{{item.rank==2}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：干 事</text>
+        <text class="text" wx:elif="{{item.rank==3}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：部 长</text>
+        <text class="text" wx:elif="{{item.rank==4}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：副 主席</text>
+        <text class="text" wx:elif="{{item.rank==5}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：主 席</text>
+        <text class="text" wx:elif="{{item.rank==6}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：指导 老师</text>
+        <text class="text" wx:else>学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：游 客</text>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</van-panel>
+</view>

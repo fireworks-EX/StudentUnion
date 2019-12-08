@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container" >
+
+  <van-image class="pic"
+    round
+    width="7rem"
+    height="7rem"
+    src="../../pic/stu.png"
+  />
+
+  <van-cell-group>
+    <van-field
+      value="{{ uid }}"
+      clearable
+      label="学号"
+      placeholder="请输入学号"
+      bind:change="onChangeid"
+    />
+
+    <van-field
+      value="{{ pwd }}"
+      type="password"
+      label="密码"
+      placeholder="请输入密码"
+      border="{{ false }}"
+      bind:change="onChangepwd"
+    />
+  </van-cell-group>
+
+  <van-button bind:click="click" type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)">登录</van-button>
+
+  <van-button class="right" bind:click="reset" type="primary" size="mini">重置密码</van-button>
+  <van-button class="right" bind:click="add" type="primary" size="mini">注册</van-button>
+
+</view>

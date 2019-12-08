@@ -1,0 +1,12 @@
+.flex{
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+label{
+  margin-left: 15px;
+}
+radio-group{
+  display: flex;
+  align-items: center;
+}

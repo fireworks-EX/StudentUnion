@@ -1,0 +1,13 @@
+<view class="container">
+
+    <view class="item" wx:for="{{result}}">
+      <view class="img">
+        <image class="pic" mode="scaleToFill" src="../../pic/tree.png"></image>
+      </view>
+      <view class="bg">
+        <text class="text" wx:if="{{item.depuid != null}}">通知类型:{{item.depuid}}\n通知内容:{{item.informerid}}</text> 
+        <text class="text" wx:else>通知类型:活动通知\n活动名：{{item.activityname}}\n活动id: {{item.activityid}}\n审批id：{{item.judgeid}}\n申请部门：{{item.applydep}}\n组织部门：{{item.departmentassist}}\n需要人数: {{item.peopleamount}}\n时间：{{item.starttime}}—{{item.overtime}}</text>  
+      </view>   
+    </view>
+
+</view>

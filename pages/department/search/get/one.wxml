@@ -1,0 +1,13 @@
+<view class="container">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    show-action
+    bind:search="onSearch"
+    bind:cancel="onCancel"
+  />
+
+  <view wx:if="{{hide}}">
+    <text>部门id：{{result.dataObj.departmentid}}\n部门名: {{result.dataObj.departmentname}}\n主席学号：{{result.dataObj.chairmanid}}\n部长学号: {{result.dataObj.ministerid}}\n部门人数：{{result.dataObj.peoplenumber}}\n创建时间：{{result.dataObj.createtime}}\n部门简介：{{result.dataObj.introduction}}\n</text>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="container">
+
+<van-grid square clickable column-num="2">
+  <van-grid-item
+    icon="add-o"
+    link-type="navigateTo"
+    url="add/addbatch"
+    text="添加批次"
+  />
+  <van-grid-item
+    icon="records"
+    link-type="navigateTo"
+    url="load/loadbatch"
+    text="开始考评"
+  />
+</van-grid>
+
+</view>

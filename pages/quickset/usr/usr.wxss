@@ -1,0 +1,16 @@
+.pic{
+  margin-top: 10px; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+.flex{
+  display: flex;
+  height: 40px;
+  align-items: center;
+  margin-left: 15px;
+}
+.right{
+  margin-top: 15px;
+  float: right;
+}

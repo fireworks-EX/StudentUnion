@@ -1,0 +1,30 @@
+<view class="container">
+<van-panel title="部门：{{ depName }}"  status="详情" use-footer-slot>
+  <van-cell-group wx:for="{{ result }}">
+    <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}" >
+      <view slot="left" class="left" bindtap="change" value="{{ level }}">职位调整</view>
+      <view class="item" id="{{index}}" bindtouchmove="click">
+        <image class="pic" mode="scaleToFill" src="../../pic/tree.png"></image>
+        <text class="text" wx:if="{{item.rank==2}}">学 号：{{item.uid}}　　　姓 名：{{item.username}}\n职 位：干 事　　　　　分 院：{{item.branch}}\n联系电话:{{item.phonenumber}}</text>
+        <text class="text" wx:elif="{{item.rank==3}}">学 号：{{item.uid}}　　　姓 名：{{item.username}}\n职 位：部 长　　　　　分 院：{{item.branch}}\n联系电话:{{item.phonenumber}}</text>
+        <text class="text" wx:elif="{{item.rank==4}}">学 号：{{item.uid}}　　　姓 名：{{item.username}}\n职 位：副 主席　　　　分 院：{{item.branch}}\n联系电话:{{item.phonenumber}}</text>
+        <text class="text" wx:elif="{{item.rank==5}}">学 号：{{item.uid}}　　　姓 名：{{item.username}}\n职 位：主 席　　　　　分 院：{{item.branch}}\n联系电话:{{item.phonenumber}}</text>
+        <text class="text" wx:elif="{{item.rank==6}}">学 号：{{item.uid}}　　　姓 名：{{item.username}}\n职 位：指导 老师　　　分 院：{{item.branch}}\n联系电话:{{item.phonenumber}}</text>
+        <text class="text" wx:elif="{{item.rank==1}}">学 号：{{item.uid}}　　　姓 名：{{item.username}}\n职 位：游 客　　　　　分 院：{{item.branch}}\n联系电话:{{item.phonenumber}}</text>
+      </view>
+      <view slot="right" class="right" bindtap="del">删除</view>
+    </van-swipe-cell>
+  </van-cell-group>
+  <view slot="footer" class="rightbtn">
+    <van-button bind:click="submit" size="small" type="danger">添加成员</van-button>
+  </view>
+    <van-action-sheet show="{{ show }}">
+      <van-picker
+        show-toolbar
+        columns="{{ columns }}"
+        bind:cancel="onCancel"
+        bind:confirm="onConfirm"
+      />
+    </van-action-sheet>
+</van-panel>
+</view>

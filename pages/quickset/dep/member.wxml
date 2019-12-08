@@ -1,0 +1,25 @@
+<view class="container">
+<van-panel title="部门：{{ depName }}"  status="详情"t>
+  <view class="flex"><label>部门id: {{depId}}</label></view> 
+  <view class="flex"><label>主席学号: {{chairmanid}}</label></view>
+  <view class="flex"><label>部长学号: {{ministerid}}</label></view>
+  <view class="flex"><label>部门人数：{{peoplenumber}}</label></view>
+  <view class="flex"><label>创建时间：{{createtime}}</label></view>
+  <view class="flex"><label>部门简介：{{introduction}}</label></view>
+
+  <van-divider contentPosition="center">成员</van-divider>
+  <van-cell-group wx:for="{{ result.dataObj }}">
+    <van-cell>
+      <view class="item">
+        <image class="pic" mode="scaleToFill" src="../../../pic/tree.png"></image>
+        <text class="text" wx:if="{{item.rank==2}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：干事</text>
+        <text class="text" wx:elif="{{item.rank==3}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：部长</text>
+        <text class="text" wx:elif="{{item.rank==4}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：副主席</text>
+        <text class="text" wx:elif="{{item.rank==5}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：主席</text>
+        <text class="text" wx:elif="{{item.rank==6}}">学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：指导老师</text>
+        <text class="text" wx:else>学 号：{{item.uid}}\n姓 名：{{item.username}}\n职 位：游客</text>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</van-panel>
+</view>

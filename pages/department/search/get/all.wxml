@@ -1,0 +1,7 @@
+<view class="container">
+  <van-collapse wx:for="{{ result.dataObj }}" value="{{ activeName }}" bind:change="onChange" accordion>
+  <van-collapse-item title="部门名：{{item.departmentname}}" name="{{index}}">
+    <text>部门id: {{item.departmentid}}\n主席学号：{{item.chairmanid}}\n主席姓名：{{item.chairmanname}}\n部长学号: {{item.ministerid}}\n部长姓名: {{item.ministername}}\n部门人数：{{item.peoplenumber}}\n部门简介：{{item.introduction}}\n</text>
+  </van-collapse-item>
+</van-collapse>
+</view>

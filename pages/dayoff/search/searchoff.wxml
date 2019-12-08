@@ -1,0 +1,20 @@
+<view class="container">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    show-action
+    bind:search="onSearch"
+    bind:cancel="onCancel"
+  />
+
+  <view wx:if="{{hide}}">
+    <text class="txt">请假id：{{result.dataObj.vacateid}}\n </text>
+    <text class="txt">请假者学号：{{result.dataObj.vacateperson}}\n </text>
+    <text class="txt">所属部门：{{result.dataObj.persondepartment}}\n </text>
+    <text class="txt">请假理由：{{result.dataObj.vacatereason}}\n </text>
+    <text class="txt">请假开始时间：{{result.dataObj.leavetime}}\n </text>
+    <text class="txt">请假结束时间：{{result.dataObj.backtime}}\n </text>
+    <text class="txt">请假状态：{{result.dataObj.iscancel}}\n </text>
+    <text class="txt">审批id：{{result.dataObj.judgeid}}\n </text>
+  </view>
+</view>

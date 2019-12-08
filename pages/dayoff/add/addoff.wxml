@@ -1,0 +1,73 @@
+<view class="container">
+
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <van-cell-group>
+      <!-- <van-field
+        value="{{ vacateperson	 }}"
+        clearable
+        required
+        label="申请人"
+        placeholder="请输入申请人"
+        bind:change="onChangeper"
+      /> -->
+
+      <van-field
+        value="{{ vacatereason }}"
+        clearable
+        required
+        label="请假理由"
+        placeholder="请输入请假理由"
+        bind:change="onChangerea"
+      />
+
+    </van-cell-group>
+
+
+    <!-- <van-cell title="所属部门" is-link value="{{ persondepartment }}" bind:click="dep"/>
+
+    <van-action-sheet show="{{ show }}">
+      <van-picker
+        show-toolbar
+        columns="{{ columns }}"
+        bind:cancel="onCancel"
+        bind:confirm="onConfirm"
+      />
+    </van-action-sheet> -->
+
+    <van-cell title="请假时间" is-link value="{{ leavetime }}" bind:click="start"/>
+
+    <van-action-sheet show="{{ show1 }}">
+      <van-datetime-picker
+        type="datetime"
+        value="{{ currentDate1 }}"
+        min-date="{{ minDate1 }}"
+        max-date="{{ maxDate1 }}"
+        bind:input="onInput1"
+        bind:cancel="onCancel1"
+        bind:confirm="onConfirm1"
+      />
+    </van-action-sheet>
+
+    <van-cell title="返校时间" is-link value="{{ backtime }}" bind:click="over"/>
+
+    <van-action-sheet show="{{ show2 }}">
+      <van-datetime-picker
+        type="datetime"
+        value="{{ currentDate2 }}"
+        min-date="{{ minDate2 }}"
+        max-date="{{ maxDate2 }}"
+        bind:input="onInput2"
+        bind:cancel="onCancel2"
+        bind:confirm="onConfirm2"
+      />
+    </van-action-sheet>
+
+    <van-button class="btn" bind:click="submit" type="primary" size="large" color="linear-gradient(to right, #6495ED, #00BFFF)">提交</van-button>
+    <van-button class="btn" bind:click="reset" type="primary" size="large" color="linear-gradient(to right, #98FB98, #40E0D0)">重置</van-button>
+
+  </form>
+
+
+</view>

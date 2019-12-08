@@ -1,0 +1,13 @@
+<view class="container">
+  <van-collapse wx:for="{{ result }}" value="{{ activeName }}" bind:change="onChange" accordion>
+  <van-collapse-item title="请假者学号：{{item.vacateperson}}" name="{{index}}">
+    <text class="txt">请假id：{{item.vacateid}}\n </text>
+    <text class="txt">所属部门：{{item.persondepartment}}\n </text>
+    <text class="txt">请假理由：{{item.vacatereason}}\n </text>
+    <text class="txt">请假开始时间：{{item.leavetime}}\n </text>
+    <text class="txt">请假结束时间：{{item.backtime}}\n </text>
+    <text class="txt">请假状态：{{item.iscancel}}\n </text>
+    <text class="txt">审批id：{{item.judgeid}}\n </text>
+  </van-collapse-item>
+</van-collapse>
+</view>

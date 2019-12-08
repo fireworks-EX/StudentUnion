@@ -1,0 +1,4 @@
+.txt{
+  margin-left: 15px;
+  text-align: justify;
+}

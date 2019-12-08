@@ -1,0 +1,38 @@
+<view class="container">
+<van-cell-group>
+  <van-cell link-type="navigateTo" url="../quickset/usr/usr" >
+    <view class="item">
+      <image class="pic" mode="scaleToFill" src="../../pic/tree.png"></image>
+      <text class="txt">学 号：{{uid}}\n姓 名：{{username}}</text>
+      <text>　　　</text>
+      <van-icon name="arrow" />
+    </view>
+  </van-cell>
+  <van-cell />
+  <van-cell is-link link-type="navigateTo" url="../quickset/dep/member" >
+    <view slot="title">
+      <text class="txt">部门：{{departments}}</text>
+    </view>
+  </van-cell>
+  <van-cell />
+  <van-cell >
+    <view slot="title">
+      <text class="txt">职位：{{level}}</text>
+    </view>
+  </van-cell>
+  <van-cell />
+  <van-cell is-link link-type="navigateTo" url="info" >
+    <view slot="title">
+      <text class="txt">审批事项</text>
+    </view>
+  </van-cell>
+  <van-cell />
+  <van-cell is-link link-type="navigateTo" url="../quickset/set/quit" >
+    <view slot="title">
+      <text class="txt">设置 </text>
+      <van-icon name="setting-o" />
+    </view>
+  </van-cell>
+</van-cell-group>
+
+</view>

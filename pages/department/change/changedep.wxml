@@ -1,0 +1,68 @@
+<view class="container">
+
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <van-cell-group>
+      <van-field
+        value="{{ depId }}"
+        clearable
+        required
+        label="部门id"
+        placeholder="请输入部门id"
+        bind:change="onChangedepid"
+      />
+
+      <van-field
+        value="{{ departmentname }}"
+        clearable
+        required
+        label="部门名"
+        placeholder="请输入部门名"
+        bind:change="onChangedep"
+      />
+
+      <van-field
+        value="{{ ministerid }}"
+        clearable
+        required
+        label="部长id"
+        placeholder="请输入部长id"
+        bind:change="onChangemin"
+      />
+
+      <van-field
+        value="{{ chairmanid }}"
+        clearable
+        required
+        label="主席id"
+        placeholder="请输入主席id"
+        bind:change="onChangecha"
+      />
+
+      <van-field
+        value="{{ peoplenumber }}"
+        clearable
+        required
+        label="人数"
+        placeholder="请输入人数"
+        bind:change="onChangenum"
+      />  
+
+      <van-field
+        value="{{ introduction }}"
+        clearable
+        required
+        label="介绍"
+        placeholder="请输入介绍"
+        bind:change="onChangeintro"
+      />     
+    </van-cell-group>
+
+    <van-button class="btn" bind:click="submit" type="primary" size="large" color="linear-gradient(to right, #6495ED, #00BFFF)">提交</van-button>
+    <van-button class="btn" bind:click="reset" type="primary" size="large" color="linear-gradient(to right, #98FB98, #40E0D0)">重置</van-button>
+
+  </form>
+
+
+</view>
